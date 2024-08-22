@@ -1,0 +1,21 @@
+
+/*
+    ques name- merge-sorted-arrays
+    link- https://leetcode.com/problems/merge-sorted-array/
+    author- parth garg
+    time complexity = o(n)+ (n+m)log(n+m);
+    method 2- use sort function
+*/
+
+class Solution {
+public:
+    void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
+        int j=0;
+        for(int i=m;i<m+n;i++)
+        {
+            nums1[i]=nums2[j];
+            j++;
+        }
+        sort(nums1.begin(),nums1.end());
+    }
+};
